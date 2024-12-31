@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=AMD&interval=60min&adjusted=true&month=2024-11&outputsize=compact&datatype=json
+  url: https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&interval=60min&symbol=AMD&adjusted=true&month=2024-11&outputsize=compact&datatype={{datatype}}
   body: none
   auth: inherit
 }
@@ -17,7 +17,7 @@ params:query {
   adjusted: true
   month: 2024-11
   outputsize: compact
-  datatype: json
+  datatype: {{datatype}}
 }
 
 docs {
