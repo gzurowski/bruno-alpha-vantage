@@ -1,0 +1,22 @@
+meta {
+  name: Weekly
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=AMD&outputsize=compact&datatype={{datatype}}
+  body: none
+  auth: inherit
+}
+
+params:query {
+  function: TIME_SERIES_WEEKLY
+  symbol: AMD
+  outputsize: compact
+  datatype: {{datatype}}
+}
+
+docs {
+  [API docs](https://www.alphavantage.co/documentation/#weekly)
+}
