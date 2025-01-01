@@ -1,0 +1,21 @@
+meta {
+  name: Quote Endpoint
+  type: http
+  seq: 8
+}
+
+get {
+  url: https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=AMD&datatype={{datatype}}
+  body: none
+  auth: inherit
+}
+
+params:query {
+  function: GLOBAL_QUOTE
+  symbol: AMD
+  datatype: {{datatype}}
+}
+
+docs {
+  [API docs](https://www.alphavantage.co/documentation/#latestprice)
+}
