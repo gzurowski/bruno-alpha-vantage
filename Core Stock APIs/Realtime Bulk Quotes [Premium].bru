@@ -1,0 +1,21 @@
+meta {
+  name: Realtime Bulk Quotes [Premium]
+  type: http
+  seq: 9
+}
+
+get {
+  url: https://www.alphavantage.co/query?function=REALTIME_BULK_QUOTES&symbol=AMD&datatype={{datatype}}
+  body: none
+  auth: inherit
+}
+
+params:query {
+  function: REALTIME_BULK_QUOTES
+  symbol: AMD
+  datatype: {{datatype}}
+}
+
+docs {
+  [API docs](https://www.alphavantage.co/documentation/#realtime-bulk-quotes)
+}
