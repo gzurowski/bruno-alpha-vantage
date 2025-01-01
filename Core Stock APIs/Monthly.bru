@@ -1,0 +1,22 @@
+meta {
+  name: Monthly
+  type: http
+  seq: 6
+}
+
+get {
+  url: https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=AMD&outputsize=compact&datatype={{datatype}}
+  body: none
+  auth: inherit
+}
+
+params:query {
+  function: TIME_SERIES_MONTHLY
+  symbol: AMD
+  outputsize: compact
+  datatype: {{datatype}}
+}
+
+docs {
+  [API docs](https://www.alphavantage.co/documentation/#monthly)
+}
