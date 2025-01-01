@@ -1,0 +1,22 @@
+meta {
+  name: Weekly Adjusted
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=AMD&outputsize=compact&datatype={{datatype}}
+  body: none
+  auth: inherit
+}
+
+params:query {
+  function: TIME_SERIES_WEEKLY_ADJUSTED
+  symbol: AMD
+  outputsize: compact
+  datatype: {{datatype}}
+}
+
+docs {
+  [API docs](https://www.alphavantage.co/documentation/#weeklyadj)
+}
