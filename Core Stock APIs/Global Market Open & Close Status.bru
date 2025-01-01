@@ -1,0 +1,20 @@
+meta {
+  name: Global Market Open & Close Status
+  type: http
+  seq: 11
+}
+
+get {
+  url: https://www.alphavantage.co/query?function=MARKET_STATUS&datatype={{datatype}}
+  body: none
+  auth: inherit
+}
+
+params:query {
+  function: MARKET_STATUS
+  datatype: {{datatype}}
+}
+
+docs {
+  [API docs](https://www.alphavantage.co/documentation/#realtime-bulk-quotes)
+}
