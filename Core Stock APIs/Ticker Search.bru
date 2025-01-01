@@ -1,0 +1,21 @@
+meta {
+  name: Ticker Search
+  type: http
+  seq: 10
+}
+
+get {
+  url: https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=advanced micro dev&datatype={{datatype}}
+  body: none
+  auth: inherit
+}
+
+params:query {
+  function: SYMBOL_SEARCH
+  keywords: advanced micro dev
+  datatype: {{datatype}}
+}
+
+docs {
+  [API docs](https://www.alphavantage.co/documentation/#symbolsearch)
+}
